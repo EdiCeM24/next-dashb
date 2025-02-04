@@ -1,4 +1,3 @@
-
 import Header from "./components/Header";
 import './globals.css';
 import { ThemeProvider } from "next-themes";
@@ -9,8 +8,10 @@ import { ThemeModeScript } from "flowbite-react";
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+       <html lang="en" suppressHydrationWarning>
         <head>
+          <title>Edi_Mars&apos;</title>
+          <link rel="shortcut icon" href="./favicon4.ico" type="image/x-icon"></link>
           <ThemeModeScript />
         </head>  
         <body

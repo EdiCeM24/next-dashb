@@ -12,7 +12,6 @@ import { dark, light } from "@clerk/themes";
 
 export default function Header() {
   const path = usePathname();
-  // const router = useRouter();
   const { theme, setTheme } = useTheme();
   return (
     <Navbar className="border-b-2 gap-4">
@@ -20,7 +19,8 @@ export default function Header() {
         href='/'
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
       >
-        <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+        <span className="flex items-center px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+          <img src='./Image/favicon4.ico' alt=''/>
           Edi_Mars
         </span>
 
@@ -55,7 +55,7 @@ export default function Header() {
           </SignedIn>
           <SignedOut>
             <Link href="/sign-in">
-              <Button gradientDuoTone="purpleToBlue" outline as={'div'}>
+              <Button gradientDuoTone="purpleToBlue" outline>
                 Sign In
               </Button>
             </Link>

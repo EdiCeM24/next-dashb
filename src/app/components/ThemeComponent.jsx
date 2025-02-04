@@ -7,14 +7,19 @@ export default function ThemeComponent({children}) {
     const { theme, setTheme } = useTheme();
     const { mounted, setMounted } = useState(false);
     useEffect(() => {
-      setMounted(true)
+      if(setMounted) {
+        setMounted;
+      }
       
-    }, [])
+    }, [mounted]);
 
-    if(!mounted) return null;
+    if(!mounted){
+      return null;
+    } 
+      
     
   return (
-    <div className={theme}>
+    <div className={theme} onChange={e => setTheme(e.target.value)}>
       <div 
         className="bg-white text-gray-700 dark:text-gray-200
          dark:bg-gray-900 min-h-screen"
